@@ -50,7 +50,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Acciones:</h6>
                         <a class="collapse-item" href="">Ver Odontologos</a>
-                        <a class="collapse-item" href="">Alta Odontologos</a>
+                        <a class="collapse-item" href="">Registrar Odontologos</a>
                     </div>
                 </div>
             </li>
@@ -67,7 +67,41 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Acciones:</h6>
                         <a class="collapse-item" href="">Ver pacientes</a>
-                        <a class="collapse-item" href="">Alta pacientes</a>
+                        <a class="collapse-item" href="">Registrar pacientes</a>
+                        <a class="collapse-item" href="">Ver Responsables</a>
+                        <a class="collapse-item" href="">Registrar Responsables</a>
+                    </div>
+                </div>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDate"
+                    aria-expanded="true" aria-controls="collapseDate">
+                    <i class="fas fa-solid fa-user"></i>
+                    <span>Citas</span>
+                </a>
+                <div id="collapseDate" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Acciones:</h6>
+                        <a class="collapse-item" href="">Ver Citas</a>
+                        <a class="collapse-item" href="">Registrar Citas</a>
+                    </div>
+                </div>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUsers"
+                    aria-expanded="true" aria-controls="collapseUsers">
+                    <i class="fa-regular fa-circle-user"></i>
+                    <span>Usuarios</span>
+                </a>
+                <div id="collapseUsers" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Acciones:</h6>
+                        <a class="collapse-item" href="">Ver usuarios</a>
+                        <a class="collapse-item" href="">Registrar usuarios</a>
                     </div>
                 </div>
             </li>
