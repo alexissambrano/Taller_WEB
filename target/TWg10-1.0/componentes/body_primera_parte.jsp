@@ -49,8 +49,8 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Acciones:</h6>
-                        <a class="collapse-item" href="">Ver Odontologos</a>
-                        <a class="collapse-item" href="">Registrar Odontologos</a>
+                        <a class="collapse-item" href="ver_odontologos.jsp">Ver Odontologos</a>
+                        <a class="collapse-item" href="registrar_odontologos.jsp">Registrar Odontologos</a>
                     </div>
                 </div>
             </li>
@@ -66,10 +66,10 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Acciones:</h6>
-                        <a class="collapse-item" href="">Ver pacientes</a>
-                        <a class="collapse-item" href="">Registrar pacientes</a>
-                        <a class="collapse-item" href="">Ver Responsables</a>
-                        <a class="collapse-item" href="">Registrar Responsables</a>
+                        <a class="collapse-item" href="verpacientes.jsp">Ver pacientes</a>
+                        <a class="collapse-item" href="registropacientes.jsp">Registrar pacientes</a>
+                        <a class="collapse-item" href="ver_responsables.jsp">Ver Responsables</a>
+                        <a class="collapse-item" href="registrar_responsables.jsp">Registrar Responsables</a>
                     </div>
                 </div>
             </li>
@@ -84,8 +84,8 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Acciones:</h6>
-                        <a class="collapse-item" href="">Ver Citas</a>
-                        <a class="collapse-item" href="">Registrar Citas</a>
+                        <a class="collapse-item" href="ver_cita.jsp">Ver Citas</a>
+                        <a class="collapse-item" href="registrar_cita.jsp">Registrar Citas</a>
                     </div>
                 </div>
             </li>
@@ -100,8 +100,8 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Acciones:</h6>
-                        <a class="collapse-item" href="">Ver usuarios</a>
-                        <a class="collapse-item" href="">Registrar usuarios</a>
+                        <a class="collapse-item" href="ver_usuario.jsp">Ver usuarios</a>
+                        <a class="collapse-item" href="registrar_usuario.jsp">Registrar usuarios</a>
                     </div>
                 </div>
             </li>
