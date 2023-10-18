@@ -29,11 +29,11 @@
                             </div>
                             <div class="form-group">
                                 <label>Usuario o Correo Electrónico</label>
-                                <input name="username"  type="text" class="form-control" required>
+                                <input id="username" name="username"  type="text" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label>Contraseña</label>
-                                <input name="contrasenia"  type="password" class="form-control" required>
+                                <input id="contrasenia" name="contrasenia"  type="password" class="form-control" required>
                             </div>
                             <div class="form-group text-right">
                                 <a href="forgot-password.jsp">¿Olvidaste tu contraseña?</a>

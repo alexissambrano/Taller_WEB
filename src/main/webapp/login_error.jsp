@@ -1,8 +1,3 @@
-<%-- 
-    Document   : login_error
-    Created on : 13 oct. 2023, 17:34:05
-    Author     : alons
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

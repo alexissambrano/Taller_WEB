@@ -2,6 +2,7 @@ logica\Odontologo.class
 logica\Turno.class
 logica\Usuario.class
 logica\Secretario.class
+servlets\SvLogin.class
 logica\Responsable.class
 logica\Paciente.class
 logica\Persona.class
