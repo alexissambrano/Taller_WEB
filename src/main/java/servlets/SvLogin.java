@@ -14,10 +14,12 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import logica.Controladora;
 
 @WebServlet(name = "SvLogin", urlPatterns = {"/SvLogin"})
 public class SvLogin extends HttpServlet {
-
+    
+    Controladora control = new Controladora();
  
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -40,7 +42,7 @@ public class SvLogin extends HttpServlet {
         
         // Aquí debes agregar la lógica de autenticación.
         // Comprueba si las credenciales son válidas, por ejemplo, comparándolas con una base de datos de usuarios.
-        boolean isAuthenticated = yourAuthenticationLogic(username, password);
+        boolean isAuthenticated = control.login(username, password);
 
         
         
