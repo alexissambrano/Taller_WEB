@@ -15,15 +15,16 @@ import persistencia.Usuario;
  */
 public class Controladora {
     
-    UsuarioDAO usuario = new UsuarioDAO();
-    
-    public Controladora() {
+    private UsuarioDAO usuarioDAO;
+
+    public Controladora(UsuarioDAO usuarioDAO) {
+        this.usuarioDAO = usuarioDAO;
     }
     
     public boolean login(String user,String pass){
         List<Usuario> usuarios = new ArrayList<>();
         boolean valida=false;
-        usuarios = usuario.obtenerUsuarios();
+        usuarios = usuarioDAO.obtenerUsuarios();
         
         
         for (Usuario usern:usuarios){

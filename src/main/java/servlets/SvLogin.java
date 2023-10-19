@@ -1,6 +1,8 @@
 
 package servlets;
 
+import DAO.Conexion;
+import DAO.UsuarioDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -19,7 +21,14 @@ import logica.Controladora;
 @WebServlet(name = "SvLogin", urlPatterns = {"/SvLogin"})
 public class SvLogin extends HttpServlet {
     
-    Controladora control = new Controladora();
+    // Obtén una conexión válida
+    Connection conexion = Conexion.obtenerConexion();
+
+    // Crea una instancia de UsuarioDAO y proporciona la conexión
+    UsuarioDAO usuarioDAO = new UsuarioDAO(conexion);
+
+    // Crea una instancia de Controladora y proporciona la instancia de UsuarioDAO
+    Controladora control = new Controladora(usuarioDAO);
  
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
