@@ -10,9 +10,9 @@ import java.sql.SQLException;
 
 public class Conexion {
 
-    private static final String URL = "jdbc:mysql://localhost:3306/tu_basede_datos";
-    private static final String USUARIO = "tu_usuario";
-    private static final String CONTRASENA = "tu_contraseña";
+    private static final String URL = "jdbc:mysql://localhost:3306/odontodb";
+    private static final String USUARIO = "root";
+    private static final String CONTRASENA = "123456";
 
     public static Connection obtenerConexion() {
         Connection conexion = null;
