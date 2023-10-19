@@ -1,57 +1,33 @@
-<%-- 
-    Document   : login
-    Created on : 13 oct. 2023, 17:32:26
-    Author     : alons
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-        <title>Clínica Odontologica</title>
-        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-    </head>
-
-    <body>
-        <div class="main-wrapper account-wrapper">
-            <div class="account-page">
-                <div class="account-center">
-                    <div class="account-box">
-                        <form action="SvLogin" class="form-signin" method="post">
-                            <div class="account-logo">
-                                <a href="#"><img src="assets/img/logo-dark.png" alt=""></a>
-                            </div>
-                            <div class="form-group">
-                                <label>Usuario o Correo Electrónico</label>
-                                <input id="username" name="username"  type="text" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Contraseña</label>
-                                <input id="contrasenia" name="contrasenia"  type="password" class="form-control" required>
-                            </div>
-                            <div class="form-group text-right">
-                                <a href="forgot-password.jsp">¿Olvidaste tu contraseña?</a>
-                            </div>
-                            <div class="form-group text-center">
-                                <button type="submit" class="btn btn-primary account-btn">Ingresar</button>
-                            </div>
-                            <div class="text-center register-link">
-                                ¿Aún no tienes una cuenta?  <a href="register.jsp"><b> Registrarse</b></a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <!-- Tabs Titles -->
+            <h2 class="active"> Iniciar sesión </h2>
+            <h2 class="inactive underlineHover">Registrarse </h2>
+            <!-- Icon -->
+            <div class="fadeIn first">
+                <img src="https://www.svgrepo.com/show/313375/user.svg" id="icon" alt="User Icon" /> 
+            </div>
+            <!-- Login Form -->
+            <form action="SvLogin" class="form-signin" method="post"><form>
+                <input type="text" id="login" class="fadeIn second" name="usernameE" placeholder="usuario">
+                <input type="text" id="password" class "fadeIn third" name="contrasenia" placeholder="contraseña">
+                <input type="submit" class="fadeIn fourth" value="Log In">
+            </form>
+            <!-- Remind Passowrd -->
+            <div id="formFooter">
+                <a class="underlineHover" href="#">¿Has olvidado tu contraseña?</a>
             </div>
         </div>
-        <script src="assets/js/jquery-3.2.1.min.js"></script>
-        <script src="assets/js/popper.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/app.js"></script>
-    </body>
+    </div>
+</body>
 </html>
