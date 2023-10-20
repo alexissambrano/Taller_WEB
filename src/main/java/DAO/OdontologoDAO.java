@@ -30,7 +30,7 @@ public class OdontologoDAO {
             statement.setString(4, odontologo.getApellido());
             statement.setString(5, odontologo.getTelefono());
             statement.setString(6, odontologo.getDireccion());
-            statement.setDate(7, new java.sql.Date(odontologo.getFecha_nac().getTime()));
+            statement.setString(7, odontologo.getFecha_nac());
             statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -51,7 +51,7 @@ public class OdontologoDAO {
                 String apellido = result.getString("apellido");
                 String telefono = result.getString("telefono");
                 String direccion = result.getString("direccion");
-                java.util.Date fechaNac = result.getDate("fecha_nac");
+                String fechaNac = result.getString("fecha_nac");
                 odontologos.add(new Odontologo(idOdontologo, especialidad, null, null, null, dni, apellido, telefono, direccion, fechaNac));
             }
         } catch (SQLException e) {
@@ -80,7 +80,7 @@ public void editarOdontologo(Odontologo odontologo) {
         statement.setString(3, odontologo.getApellido());
         statement.setString(4, odontologo.getTelefono());
         statement.setString(5, odontologo.getDireccion());
-        statement.setDate(6, new java.sql.Date(odontologo.getFecha_nac().getTime()));
+        statement.setString(5, odontologo.getFecha_nac());
         statement.setInt(7, odontologo.getId_odontologo());
         statement.executeUpdate();
     } catch (SQLException e) {
@@ -101,7 +101,7 @@ public Odontologo visualizarOdontologo(int idOdontologo) {
             String apellido = result.getString("apellido");
             String telefono = result.getString("telefono");
             String direccion = result.getString("direccion");
-            java.util.Date fechaNac = result.getDate("fecha_nac");
+            String fechaNac = result.getString("fecha_nac");
             return new Odontologo(idOdontologo, especialidad, null, null, null, dni, apellido, telefono, direccion, fechaNac);
         }
     } catch (SQLException e) {

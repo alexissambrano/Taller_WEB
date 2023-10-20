@@ -13,7 +13,7 @@ public class Paciente extends Persona{
     public Paciente() {
     }
 
-    public Paciente(int id_paciente, boolean tiene_OS, String tipoSangre, Responsable unResponsable, List<Turno> listTurnos, String dni, String apellido, String telefono, String direccion, Date fecha_nac) {
+    public Paciente(int id_paciente, boolean tiene_OS, String tipoSangre, Responsable unResponsable, List<Turno> listTurnos, String dni, String apellido, String telefono, String direccion, String fecha_nac) {
         super(dni, apellido, telefono, direccion, fecha_nac);
         this.id_paciente = id_paciente;
         this.tiene_OS = tiene_OS;

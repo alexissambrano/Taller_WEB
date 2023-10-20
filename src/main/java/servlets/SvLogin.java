@@ -5,12 +5,12 @@ import DAO.Conexion;
 import DAO.UsuarioDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -59,7 +59,7 @@ public class SvLogin extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("loggedIn", true);
             // Autenticación exitosa, redirige a la página de inicio.
-            response.sendRedirect("registrar_cita.jsp");
+            response.sendRedirect("index.jsp");
         } else {
             // Autenticación fallida, redirige nuevamente a la página de inicio de sesión con un mensaje de error.
             response.sendRedirect("login_error.jsp");

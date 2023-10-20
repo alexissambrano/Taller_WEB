@@ -8,12 +8,12 @@ public class Persona {
     private String apellido;
     private String telefono;
     private String direccion;
-    private Date fecha_nac;
+    private String fecha_nac;
 
     public Persona() {
     }
 
-    public Persona(String dni, String apellido, String telefono, String direccion, Date fecha_nac) {
+    public Persona(String dni, String apellido, String telefono, String direccion, String fecha_nac) {
         this.dni = dni;
         this.apellido = apellido;
         this.telefono = telefono;
@@ -53,11 +53,11 @@ public class Persona {
         this.direccion = direccion;
     }
 
-    public Date getFecha_nac() {
+    public String getFecha_nac() {
         return fecha_nac;
     }
 
-    public void setFecha_nac(Date fecha_nac) {
+    public void setFecha_nac(String fecha_nac) {
         this.fecha_nac = fecha_nac;
     }
     

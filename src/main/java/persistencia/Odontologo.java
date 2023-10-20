@@ -14,7 +14,7 @@ public class Odontologo extends Persona{
     public Odontologo() {
     }
 
-    public Odontologo(int id_odontologo, String especialidad, List<Turno> listaTurnos, Usuario unUsuario, Horario unHorario, String dni, String apellido, String telefono, String direccion, Date fecha_nac) {
+    public Odontologo(int id_odontologo, String especialidad, List<Turno> listaTurnos, Usuario unUsuario, Horario unHorario, String dni, String apellido, String telefono, String direccion, String fecha_nac) {
         super(dni, apellido, telefono, direccion, fecha_nac);
         this.id_odontologo = id_odontologo;
         this.especialidad = especialidad;

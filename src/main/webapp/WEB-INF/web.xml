@@ -18,6 +18,16 @@
     <url-pattern>/SvLogin</url-pattern>
     </servlet-mapping>
     
+    <servlet>
+    <servlet-name>SvRegistroOdontologo</servlet-name>
+    <servlet-class>servlets.SvRegistroOdontologo</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+    <servlet-name>SvRegistroOdontologo</servlet-name>
+    <url-pattern>/SvRegistroOdontologo</url-pattern>
+    </servlet-mapping>
+    
     <session-config>
         <session-timeout>
             30
