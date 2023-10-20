@@ -85,10 +85,10 @@
 								</a>
 
 								<h4 class="white-text">
-									<a class="white-text" href="#dental_contact_details">Find location</a>
+									<a class="white-text" href="#dental_contact_details">Buscar ubicacion</a>
 								</h4>
 
-								<p class="white-text">Search location on google map</p>
+								<p class="white-text">Buscar ubicación en el mapa de google</p>
 							</div>
 						</div>
 
@@ -99,10 +99,10 @@
 								</a>
 
 								<h4 class="white-text">
-									<a class="white-text" href="#dental_contact_details">New Petient</a>
+									<a class="white-text" href="#dental_contact_details">Nuevo paciente</a>
 								</h4>
 
-								<p class="white-text">Fill up all details in form to get started</p>
+								<p class="white-text">Complete todos los detalles en el formulario para comenzar</p>
 							</div>
 						</div>
 
@@ -113,10 +113,10 @@
 								</a>
 
 								<h4 class="white-text">
-									<a class="white-text" href="#dental_contact_details">Send Queries</a>
+									<a class="white-text" href="#dental_contact_details">Enviar consultas</a>
 								</h4>
 
-								<p class="white-text">Send us your questions through mail</p>
+								<p class="white-text">Envíanos tus preguntas por correo</p>
 							</div>
 						</div>
 					</div>
@@ -134,8 +134,8 @@
 
 						<div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
 							<div class="content-top-space"></div>
-							<h2> Committed To Dental Excellence </h2>
-							<div class="about-title"> We create beautiful and brighter smiles </div>
+							<h2> Comprometidos con la excelencia dental </h2>
+							<div class="about-title"> Creamos sonrisas hermosas y más brillantes. </div>
 							<div class="about-description">
 								<p>
 									Urna habitasse imperdiet! Aut, deleniti nisl, varius? Nunc, iure iure nunc sit mi ducimus atque nostrum iure ducimus quae dolore. Massa sapien at do ipsum nostra adipisicing.
@@ -145,7 +145,7 @@
 								</p>
 							</div>
 							<h4 class="dr-name"> Dr. Michael Martinez </h4>
-							<p class="dr-prof"> Master of Dentistry </p>
+							<p class="dr-prof"> Maestro de odontologia </p>
 						</div>
 					</div>
 				</div>
@@ -253,46 +253,46 @@
 
 						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
 							<div class="content-top-space"></div>
-							<h2> Dentistry For Today’s Lifestyle </h2>
-							<div class="works-sub-title"> We have all your dental needs covered </div>
+							<h2> Odontología para el estilo de vida actual </h2>
+							<div class="works-sub-title"> Tenemos todas tus necesidades dentales cubiertas </div>
 
 							<ul class="workings-first-list">
 								<li>
-									<span>Dental Exams & Cleanings</span>
+									<span>Exámenes y limpiezas dentales</span>
 								</li>
 
 								<li>
-									<span>Dental X-Rays</span>
+									<span>Radiografías Dentales</span>
 								</li>
 
 								<li>
-									<span>Cosmetic Dentistry</span>
+									<span>Odontología cosmetica</span>
 								</li>
 
 								<li>
-									<span>Periodontal Disease</span>
+									<span>Enfermedad periodontal</span>
 								</li>
 							</ul>
 
 							<ul class="workings-second-list">
 								<li>
-									<span>Root Canals</span>
+									<span>Endodoncias</span>
 								</li>
 
 								<li>
-									<span>Extractions</span>
+									<span>Extracciones</span>
 								</li>
 
 								<li>
-									<span>Teeth Whitening</span>
+									<span>Blanqueamiento dental</span>
 								</li>
 
 								<li>
-									<span>Braces & Implantse</span>
+									<span>Frenos e implantes</span>
 								</li>
 							</ul>
 
-							<div class="insurance-title"> For Insurance Call- (007) 567-8976 </div>
+							<div class="insurance-title"> Para llamadas de seguro- (51) 567-8976 </div>
 						</div>
 					</div>
 				</div>
@@ -304,8 +304,8 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-							<h2> Reviews From Our Happy Patients </h2>
-							<h6 class="review-sub-title"> Creating vibrant smiles for healthy lifestyles! </h6>
+							<h2> Comentarios de nuestras pacientes felices </h2>
+							<h6 class="review-sub-title"> ¡Creando sonrisas vibrantes para estilos de vida saludables! </h6>
 						</div>
 					</div>
 
@@ -343,8 +343,8 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-							<h2> How To Find Us </h2>
-							<h6 class="contact-sub-title"> Fill up the form and ask your queries </h6>
+							<h2> Como encontrarnos </h2>
+							<h6 class="contact-sub-title"> Rellena el formulario y haz tus consultas </h6>
 						</div>
 					</div>
 
@@ -380,21 +380,21 @@
 
 							<form action="" method="post" role="form" class="contactForm">
 
-								<h3> Book Your Appointment </h3>
+								<h3> Reserve su cita </h3>
 
-								<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+								<input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
 								<div class="validation"></div>
 
-								<input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+								<input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
 								<div class="validation"></div>
 
-								<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+								<input type="text" class="form-control" name="subject" id="subject" placeholder="Tema" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
 								<div class="validation"></div>
 
-								<textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+								<textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensaje"></textarea>
 								<div class="validation"></div>
 
-								<div><button type="submit" title="Send Request">Send Request</button></div>
+								<div><button type="submit" title="Send Request">Enviar consulta</button></div>
 							</form>
 						</div>
 
@@ -427,9 +427,7 @@
 
 		<!--Start Footer-->
 		<footer itemtype="https://schema.org/WPFooter" itemscope="itemscope" class="site-footer">
-			<div class="copyright-footer">
-				Copyright © 2019 Dental Clinic | Powered by <span> <a href="#"> WebEmpire </a> </span>
-			</div>
+			
 		</footer>
 		<!--End Footer-->
 	</body>

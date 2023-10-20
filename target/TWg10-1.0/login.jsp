@@ -11,9 +11,12 @@
     <div class="wrapper fadeInDown">
         <div id="formContent">
             <!-- Tabs Titles -->
+           <!--
             <h2 class="active"> Iniciar sesión </h2>
             <h2 class="inactive underlineHover">Registrarse </h2>
+           -->
             <!-- Icon -->
+            <br/>
             <div class="fadeIn first">
                 <img src="https://www.svgrepo.com/show/313375/user.svg" id="icon" alt="User Icon" /> 
             </div>
