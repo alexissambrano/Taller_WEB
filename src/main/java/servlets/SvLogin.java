@@ -59,7 +59,7 @@ public class SvLogin extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("loggedIn", true);
             // Autenticación exitosa, redirige a la página de inicio.
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("registrar_cita.jsp");
         } else {
             // Autenticación fallida, redirige nuevamente a la página de inicio de sesión con un mensaje de error.
             response.sendRedirect("login_error.jsp");

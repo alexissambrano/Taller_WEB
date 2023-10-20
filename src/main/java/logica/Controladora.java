@@ -29,6 +29,8 @@ public class Controladora {
         
         for (Usuario usern:usuarios){
             valida = user.equals(usern.getNombre_usuario()) && pass.equals(usern.getContrasenia());
+            if(valida)
+                break;
         }
         
         return valida;

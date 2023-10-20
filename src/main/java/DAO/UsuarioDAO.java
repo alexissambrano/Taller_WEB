@@ -23,7 +23,7 @@ public class UsuarioDAO {
 
     public void insertarUsuario(Usuario usuario) {
         try {
-            String sql = "INSERT INTO usuarios (id_usuario, nombre_usuario, contrasenia, rol, id_odontologo, id_secretario) VALUES (?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO usuario (id_usuario, nombre_usuario, contrasenia, rol, id_odontologo, id_secretario) VALUES (?, ?, ?, ?, ?, ?)";
             PreparedStatement statement = conexion.prepareStatement(sql);
             statement.setInt(1, usuario.getId_usuario());
             statement.setString(2, usuario.getNombre_usuario());
@@ -40,7 +40,7 @@ public class UsuarioDAO {
     public List<Usuario> obtenerUsuarios() {
         List<Usuario> usuarios = new ArrayList<>();
         try {
-            String sql = "SELECT * FROM usuarios";
+            String sql = "SELECT * FROM usuario";
             PreparedStatement statement = conexion.prepareStatement(sql);
             ResultSet result = statement.executeQuery();
 
@@ -61,7 +61,7 @@ public class UsuarioDAO {
 
     public void eliminarUsuario(int idUsuario) {
         try {
-            String sql = "DELETE FROM usuarios WHERE id_usuario = ?";
+            String sql = "DELETE FROM usuario WHERE id_usuario = ?";
             PreparedStatement statement = conexion.prepareStatement(sql);
             statement.setInt(1, idUsuario);
             statement.executeUpdate();
@@ -72,7 +72,7 @@ public class UsuarioDAO {
 
     public void editarUsuario(Usuario usuario) {
         try {
-            String sql = "UPDATE usuarios SET nombre_usuario = ?, contrasenia = ?, rol = ?, id_odontologo = ?, id_secretario = ? WHERE id_usuario = ?";
+            String sql = "UPDATE usuario SET nombre_usuario = ?, contrasenia = ?, rol = ?, id_odontologo = ?, id_secretario = ? WHERE id_usuario = ?";
             PreparedStatement statement = conexion.prepareStatement(sql);
             statement.setString(1, usuario.getNombre_usuario());
             statement.setString(2, usuario.getContrasenia());
@@ -88,7 +88,7 @@ public class UsuarioDAO {
 
     public Usuario obtenerUsuarioPorId(int idUsuario) {
         try {
-            String sql = "SELECT * FROM usuarios WHERE id_usuario = ?";
+            String sql = "SELECT * FROM usuario WHERE id_usuario = ?";
             PreparedStatement statement = conexion.prepareStatement(sql);
             statement.setInt(1, idUsuario);
             ResultSet result = statement.executeQuery();
