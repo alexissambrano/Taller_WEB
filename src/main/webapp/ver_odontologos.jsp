@@ -57,6 +57,10 @@ r<%@page contentType="text/html" pageEncoding="UTF-8"%>
                                             <tr>
                                                 <td>${odontologo.apellido}</td>
                                                 <td>${odontologo.especialidad}</td>
+                                                <td>${odontologo.dni}</td>
+                                                <td>${odontologo.telefono}</td>
+                                                <td>${odontologo.direccion}</td>
+                                                <td>${odontologo.fecha_nac}</td>
                                                 <!-- Agrega más columnas según tu modelo de datos -->
                                             </tr>
                                         </c:forEach>

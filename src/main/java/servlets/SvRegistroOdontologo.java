@@ -7,11 +7,12 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.Date;
 import java.util.List;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import persistencia.Odontologo;
 
 
@@ -42,18 +43,19 @@ public class SvRegistroOdontologo extends HttpServlet {
         String apellido = request.getParameter("apellido");
         String telefono = request.getParameter("telefono");
         String direccion = request.getParameter("direccion");
-        String fechaNac = request.getParameter("fechaNac");
+        String fecha_nac = request.getParameter("fecha_nac");
         
         
         
         // Crea un nuevo objeto Odontologo con los datos
         Odontologo odontologo = new Odontologo();
+        odontologo.setId_odontologo(11);
         odontologo.setEspecialidad(especialidad);
         odontologo.setDni(dni);
         odontologo.setApellido(apellido);
         odontologo.setTelefono(telefono);
         odontologo.setDireccion(direccion);
-        odontologo.setFecha_nac(fechaNac);
+        odontologo.setFecha_nac(fecha_nac);
         
         
         // Inserta el odontólogo en la base de datos

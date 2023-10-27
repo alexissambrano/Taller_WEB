@@ -9,5 +9,6 @@ DAO\OdontologoDAO.class
 persistencia\Secretario.class
 persistencia\Odontologo.class
 DAO\Conexion.class
+servlets\SvRegistroOdontologo.class
 persistencia\Paciente.class
 persistencia\Responsable.class

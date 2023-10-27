@@ -38,7 +38,7 @@
                                         placeholder="Dirección">
                                 </div>
                                 <div class="form-group">
-                                    <input name="fechaNac" type="text" class="form-control form-control-user" id="exampleInputEmail"
+                                    <input name="fecha_nac" type="text" class="form-control form-control-user" id="exampleInputEmail"
                                         placeholder="Fecha De Nacimiento">
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-user btn-block">Registrar Odontologo</button>

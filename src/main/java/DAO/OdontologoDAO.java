@@ -22,7 +22,7 @@ public class OdontologoDAO {
 
     public void insertarOdontologo(Odontologo odontologo) {
         try {
-            String sql = "INSERT INTO odontologos (id_odontologo, especialidad, dni, apellido, telefono, direccion, fecha_nac) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO odontologo (id_odontologo, especialidad, dni, apellido, telefono, direccion, fecha_nac) VALUES (?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement statement = conexion.prepareStatement(sql);
             statement.setInt(1, odontologo.getId_odontologo());
             statement.setString(2, odontologo.getEspecialidad());
@@ -40,7 +40,7 @@ public class OdontologoDAO {
     public List<Odontologo> obtenerOdontologos() {
         List<Odontologo> odontologos = new ArrayList<>();
         try {
-            String sql = "SELECT * FROM odontologos";
+            String sql = "SELECT * FROM odontologo";
             PreparedStatement statement = conexion.prepareStatement(sql);
             ResultSet result = statement.executeQuery();
 
@@ -51,7 +51,7 @@ public class OdontologoDAO {
                 String apellido = result.getString("apellido");
                 String telefono = result.getString("telefono");
                 String direccion = result.getString("direccion");
-                String fechaNac = result.getString("fecha_nac");
+                String fechaNac = result.getString("fechaNac");
                 odontologos.add(new Odontologo(idOdontologo, especialidad, null, null, null, dni, apellido, telefono, direccion, fechaNac));
             }
         } catch (SQLException e) {
@@ -62,7 +62,7 @@ public class OdontologoDAO {
 
     public void eliminarOdontologo(int idOdontologo) {
     try {
-        String sql = "DELETE FROM odontologos WHERE id_odontologo = ?";
+        String sql = "DELETE FROM odontologo WHERE id_odontologo = ?";
         PreparedStatement statement = conexion.prepareStatement(sql);
         statement.setInt(1, idOdontologo);
         statement.executeUpdate();
@@ -73,7 +73,7 @@ public class OdontologoDAO {
 
 public void editarOdontologo(Odontologo odontologo) {
     try {
-        String sql = "UPDATE odontologos SET especialidad = ?, dni = ?, apellido = ?, telefono = ?, direccion = ?, fecha_nac = ? WHERE id_odontologo = ?";
+        String sql = "UPDATE odontologo SET especialidad = ?, dni = ?, apellido = ?, telefono = ?, direccion = ?, fecha_nac = ? WHERE id_odontologo = ?";
         PreparedStatement statement = conexion.prepareStatement(sql);
         statement.setString(1, odontologo.getEspecialidad());
         statement.setString(2, odontologo.getDni());
@@ -90,7 +90,7 @@ public void editarOdontologo(Odontologo odontologo) {
 
 public Odontologo visualizarOdontologo(int idOdontologo) {
     try {
-        String sql = "SELECT * FROM odontologos WHERE id_odontologo = ?";
+        String sql = "SELECT * FROM odontologo WHERE id_odontologo = ?";
         PreparedStatement statement = conexion.prepareStatement(sql);
         statement.setInt(1, idOdontologo);
         ResultSet result = statement.executeQuery();
