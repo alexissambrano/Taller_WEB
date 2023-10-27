@@ -1,3 +1,5 @@
+<%@page import="persistencia.Odontologo"%>
+<%@page import="java.util.List"%>
 r<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="componentes/header.jsp"%>
 <%@include file="componentes/body_primera_parte.jsp"%>
@@ -53,17 +55,22 @@ r<%@page contentType="text/html" pageEncoding="UTF-8"%>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <c:forEach var="odontologo" items="${listaOdontologos}">
-                                            <tr>
-                                                <td>${odontologo.apellido}</td>
-                                                <td>${odontologo.especialidad}</td>
-                                                <td>${odontologo.dni}</td>
-                                                <td>${odontologo.telefono}</td>
-                                                <td>${odontologo.direccion}</td>
-                                                <td>${odontologo.fecha_nac}</td>
-                                                <!-- Agrega más columnas según tu modelo de datos -->
-                                            </tr>
-                                        </c:forEach>
+                                        <%
+                                            List<Odontologo> listaOdontologos = (List<Odontologo>) request.getAttribute("listaOdontologos");
+                                            for (Odontologo odontologo : listaOdontologos) {
+                                        %>
+                                        <tr>
+                                            <td><%= odontologo.getApellido() %></td>
+                                            <td><%= odontologo.getEspecialidad() %></td>
+                                            <td><%= odontologo.getDni() %></td>
+                                            <td><%= odontologo.getTelefono() %></td>
+                                            <td><%= odontologo.getDireccion() %></td>
+                                            <td><%= odontologo.getFecha_nac() %></td>
+                                            <!-- Agrega más columnas según tu modelo de datos -->
+                                        </tr>
+                                        <%
+                                            }
+                                        %>
                                     </tbody>
                                 </table>
                             </div>

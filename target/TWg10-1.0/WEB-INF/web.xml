@@ -1,33 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
-   version="6.0">
-    
+<web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
     <welcome-file-list>
         <welcome-file>bienvenido.jsp</welcome-file>
     </welcome-file-list>
-    
     <servlet>
-    <servlet-name>SvLogin</servlet-name>
-    <servlet-class>servlets.SvLogin</servlet-class>
+        <servlet-name>SvLogin</servlet-name>
+        <servlet-class>servlets.SvLogin</servlet-class>
     </servlet>
-    
-    <servlet-mapping>
-    <servlet-name>SvLogin</servlet-name>
-    <url-pattern>/SvLogin</url-pattern>
-    </servlet-mapping>
-    
     <servlet>
-    <servlet-name>SvRegistroOdontologo</servlet-name>
-    <servlet-class>servlets.SvRegistroOdontologo</servlet-class>
+        <servlet-name>SvVerOdonto</servlet-name>
+        <servlet-class>servlets.SvVerOdonto</servlet-class>
     </servlet>
-    
     <servlet-mapping>
-    <servlet-name>SvRegistroOdontologo</servlet-name>
-    <url-pattern>/SvRegistroOdontologo</url-pattern>
+        <servlet-name>SvLogin</servlet-name>
+        <url-pattern>/SvLogin</url-pattern>
     </servlet-mapping>
-    
+    <servlet>
+        <servlet-name>SvRegistroOdontologo</servlet-name>
+        <servlet-class>servlets.SvRegistroOdontologo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SvRegistroOdontologo</servlet-name>
+        <url-pattern>/SvRegistroOdontologo</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SvVerOdonto</servlet-name>
+        <servlet-class>servlets.SvVerOdonto</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SvVerOdonto</servlet-name>
+        <url-pattern>/SvVerOdonto</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

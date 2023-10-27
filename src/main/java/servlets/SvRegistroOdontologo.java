@@ -13,6 +13,9 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import persistencia.Odontologo;
 
 
@@ -49,7 +52,6 @@ public class SvRegistroOdontologo extends HttpServlet {
         
         // Crea un nuevo objeto Odontologo con los datos
         Odontologo odontologo = new Odontologo();
-        odontologo.setId_odontologo(11);
         odontologo.setEspecialidad(especialidad);
         odontologo.setDni(dni);
         odontologo.setApellido(apellido);
@@ -62,14 +64,9 @@ public class SvRegistroOdontologo extends HttpServlet {
         OdontologoDAO odontologoDAO = new OdontologoDAO(conexion); // Asegúrate de que tu DAO esté correctamente configurado
         odontologoDAO.insertarOdontologo(odontologo);
         
-        // Obtiene la lista de odontólogos de la base de datos
-        List<Odontologo> listaOdontologos = odontologoDAO.obtenerOdontologos();
-        
-        // Establece la lista en el ámbito de la solicitud
-        request.setAttribute("listaOdontologos", listaOdontologos);
-        
         // Redirige a la página ver_odontologos.jsp
-        request.getRequestDispatcher("ver_odontologos.jsp").forward(request, response);
+        request.getRequestDispatcher("index.jsp").forward(request, response);
+
     }
 
 
