@@ -4,25 +4,23 @@
  */
 package persistencia;
 
-import java.util.Date;
 
 /**
  *
  * @author noroot
  */
-public class Responsable extends Persona{
+public class Responsable {
+    // Atributos
     private int id_responsable;
-    private String tipoResp;
+    private String tipo_resp;
 
-    public Responsable() {
-    }
-
-    public Responsable(int id_responsable, String tipoResp, String dni, String apellido, String telefono, String direccion, String fecha_nac) {
-        super(dni, apellido, telefono, direccion, fecha_nac);
+    // Constructor
+    public Responsable(int id_responsable, String tipo_resp) {
         this.id_responsable = id_responsable;
-        this.tipoResp = tipoResp;
+        this.tipo_resp = tipo_resp;
     }
 
+    // Métodos getter y setter para acceder a los atributos
     public int getId_responsable() {
         return id_responsable;
     }
@@ -31,13 +29,14 @@ public class Responsable extends Persona{
         this.id_responsable = id_responsable;
     }
 
-    public String getTipoResp() {
-        return tipoResp;
+    public String getTipo_resp() {
+        return tipo_resp;
     }
 
-    public void setTipoResp(String tipoResp) {
-        this.tipoResp = tipoResp;
+    public void setTipo_resp(String tipo_resp) {
+        this.tipo_resp = tipo_resp;
     }
-    
-    
+
+    // Otros métodos que puedas necesitar para la clase Responsable
 }
+

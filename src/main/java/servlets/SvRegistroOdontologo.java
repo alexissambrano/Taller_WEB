@@ -49,7 +49,7 @@ public class SvRegistroOdontologo extends HttpServlet {
         String fecha_nac = request.getParameter("fecha_nac");
         
         
-        
+        /*
         // Crea un nuevo objeto Odontologo con los datos
         Odontologo odontologo = new Odontologo();
         odontologo.setEspecialidad(especialidad);
@@ -66,7 +66,7 @@ public class SvRegistroOdontologo extends HttpServlet {
         
         // Redirige a la página ver_odontologos.jsp
         request.getRequestDispatcher("index.jsp").forward(request, response);
-
+        */
     }
 
 

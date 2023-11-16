@@ -23,7 +23,7 @@
             <!-- Login Form -->
             <form action="SvLogin" class="form-signin" method="post"><form>
                 <input type="text" id="login" class="fadeIn second" name="username" placeholder="usuario">
-                <input type="text" id="password" class "fadeIn third" name="contrasenia" placeholder="contraseña">
+                <input type="text" id="password" class "fadeIn third" name="password" placeholder="contraseña">
                 <input type="submit" class="fadeIn fourth" value="Log In">
             </form>
             <!-- Remind Passowrd -->

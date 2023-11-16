@@ -1,43 +1,22 @@
 package persistencia;
 
-import java.util.Date;
-import java.util.List;
 
-public class Paciente extends Persona{
+public class Paciente {
+    // Atributos
     private int id_paciente;
-    private boolean tiene_OS;
-    private String tipoSangre;
-    private Responsable unResponsable;
-    private List<Turno> listaTurnos;
+    private String seguro;
+    private String tipo_sangre;
+    private Responsable responsable; // Referencia a la clase Responsable
 
-    public Paciente() {
-    }
-
-    public Paciente(int id_paciente, boolean tiene_OS, String tipoSangre, Responsable unResponsable, List<Turno> listTurnos, String dni, String apellido, String telefono, String direccion, String fecha_nac) {
-        super(dni, apellido, telefono, direccion, fecha_nac);
+    // Constructor
+    public Paciente(int id_paciente, String seguro, String tipo_sangre, Responsable responsable) {
         this.id_paciente = id_paciente;
-        this.tiene_OS = tiene_OS;
-        this.tipoSangre = tipoSangre;
-        this.unResponsable = unResponsable;
-        this.listaTurnos = listaTurnos;
+        this.seguro = seguro;
+        this.tipo_sangre = tipo_sangre;
+        this.responsable = responsable;
     }
 
-    public Responsable getUnResponsable() {
-        return unResponsable;
-    }
-
-    public void setUnResponsable(Responsable unResponsable) {
-        this.unResponsable = unResponsable;
-    }
-
-    public List<Turno> getListTurnos() {
-        return listaTurnos;
-    }
-
-    public void setListTurnos(List<Turno> listTurnos) {
-        this.listaTurnos = listTurnos;
-    }
-
+    // Métodos getter y setter para acceder a los atributos
     public int getId_paciente() {
         return id_paciente;
     }
@@ -46,23 +25,29 @@ public class Paciente extends Persona{
         this.id_paciente = id_paciente;
     }
 
-    public boolean isTiene_OS() {
-        return tiene_OS;
+    public String getSeguro() {
+        return seguro;
     }
 
-    public void setTiene_OS(boolean tiene_OS) {
-        this.tiene_OS = tiene_OS;
+    public void setSeguro(String seguro) {
+        this.seguro = seguro;
     }
 
-    public String getTipoSangre() {
-        return tipoSangre;
+    public String getTipo_sangre() {
+        return tipo_sangre;
     }
 
-    public void setTipoSangre(String tipoSangre) {
-        this.tipoSangre = tipoSangre;
+    public void setTipo_sangre(String tipo_sangre) {
+        this.tipo_sangre = tipo_sangre;
     }
 
-    
-    
-    
+    public Responsable getResponsable() {
+        return responsable;
+    }
+
+    public void setResponsable(Responsable responsable) {
+        this.responsable = responsable;
+    }
+
+    // Otros métodos que puedas necesitar para la clase Paciente
 }

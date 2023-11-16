@@ -1,36 +1,35 @@
 package persistencia;
 
-import java.util.Date;
-import java.util.List;
 
 public class Odontologo extends Persona{
-
+    // Atributos
     private int id_odontologo;
     private String especialidad;
-    private List<Turno> listaTurnos;
-    private Usuario unUsuario;
-    private Horario unHorario;
+    private Horario horario;
+    private Usuario usuario; // Referencia a la clase Usuario
 
-    public Odontologo() {
+    // Constructor
+
+    public Odontologo(int id_persona, String dni, String nombre, String apellido, int edad, String telefono, String direccion, String fecha_nac) {
+        super(id_persona, dni, nombre, apellido, edad, telefono, direccion, fecha_nac);
     }
 
-    public Odontologo(int id_odontologo, String especialidad, List<Turno> listaTurnos, Usuario unUsuario, Horario unHorario, String dni, String apellido, String telefono, String direccion, String fecha_nac) {
-        super(dni, apellido, telefono, direccion, fecha_nac);
+    public Odontologo(int id_odontologo, String especialidad, Horario horario, Usuario usuario, int id_persona, String dni, String nombre, String apellido, int edad, String telefono, String direccion, String fecha_nac) {
+        super(id_persona, dni, nombre, apellido, edad, telefono, direccion, fecha_nac);
         this.id_odontologo = id_odontologo;
         this.especialidad = especialidad;
-        this.listaTurnos = listaTurnos;
-        this.unUsuario = unUsuario;
-        this.unHorario = unHorario;
+        this.horario = horario;
+        this.usuario = usuario;
     }
 
-    public Odontologo(String especialidad, List<Turno> listaTurnos, Usuario unUsuario, Horario unHorario, String dni, String apellido, String telefono, String direccion, String fecha_nac) {
-        super(dni, apellido, telefono, direccion, fecha_nac);
+    public Odontologo(String especialidad, Horario horario, Usuario usuario, int id_persona, String dni, String nombre, String apellido, int edad, String telefono, String direccion, String fecha_nac) {
+        super(id_persona, dni, nombre, apellido, edad, telefono, direccion, fecha_nac);
         this.especialidad = especialidad;
-        this.listaTurnos = listaTurnos;
-        this.unUsuario = unUsuario;
-        this.unHorario = unHorario;
+        this.horario = horario;
+        this.usuario = usuario;
     }
-
+    
+    // Métodos getter y setter para acceder a los atributos
     public int getId_odontologo() {
         return id_odontologo;
     }
@@ -38,7 +37,6 @@ public class Odontologo extends Persona{
     public void setId_odontologo(int id_odontologo) {
         this.id_odontologo = id_odontologo;
     }
-    
 
     public String getEspecialidad() {
         return especialidad;
@@ -48,30 +46,21 @@ public class Odontologo extends Persona{
         this.especialidad = especialidad;
     }
 
-    public List<Turno> getListaTurnos() {
-        return listaTurnos;
+    public Horario getHorario() {
+        return horario;
     }
 
-    public void setListaTurnos(List<Turno> listaTurnos) {
-        this.listaTurnos = listaTurnos;
+    public void setHorario(Horario horario) {
+        this.horario = horario;
     }
 
-    public Usuario getUnUsuario() {
-        return unUsuario;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public void setUnUsuario(Usuario unUsuario) {
-        this.unUsuario = unUsuario;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
-    public Horario getUnHorario() {
-        return unHorario;
-    }
-
-    public void setUnHorario(Horario unHorario) {
-        this.unHorario = unHorario;
-    }
-    
-    
-    
+    // Otros métodos que puedas necesitar para la clase Odontologo
 }

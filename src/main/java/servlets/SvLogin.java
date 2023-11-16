@@ -47,7 +47,7 @@ public class SvLogin extends HttpServlet {
             throws ServletException, IOException {
          // Obtenemos los valores del formulario
         String username = request.getParameter("username");
-        String password = request.getParameter("contrasenia");
+        String password = request.getParameter("password");
         
         // Aquí debes agregar la lógica de autenticación.
         // Comprueba si las credenciales son válidas, por ejemplo, comparándolas con una base de datos de usuarios.

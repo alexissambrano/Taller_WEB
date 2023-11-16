@@ -4,27 +4,20 @@
  */
 package persistencia;
 
-import java.util.Date;
-
-/**
- *
- * @author noroot
- */
-public class Secretario extends Persona{
+public class Secretario {
+    // Atributos
     private int id_secretario;
     private String sector;
-    private Usuario unUsuario;
+    private Usuario usuario; // Referencia a la clase Usuario
 
-    public Secretario() {
-    }
-
-    public Secretario(int id_secretario, String sector, Usuario unUsuario, String dni, String apellido, String telefono, String direccion, String fecha_nac) {
-        super(dni, apellido, telefono, direccion, fecha_nac);
+    // Constructor
+    public Secretario(int id_secretario, String sector, Usuario usuario) {
         this.id_secretario = id_secretario;
         this.sector = sector;
-        this.unUsuario = unUsuario;
+        this.usuario = usuario;
     }
 
+    // Métodos getter y setter para acceder a los atributos
     public int getId_secretario() {
         return id_secretario;
     }
@@ -41,13 +34,13 @@ public class Secretario extends Persona{
         this.sector = sector;
     }
 
-    public Usuario getUnUsuario() {
-        return unUsuario;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public void setUnUsuario(Usuario unUsuario) {
-        this.unUsuario = unUsuario;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
-    
-    
+
+    // Otros métodos que puedas necesitar para la clase Secretario
 }

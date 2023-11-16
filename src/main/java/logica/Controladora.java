@@ -17,18 +17,18 @@ public class Controladora {
     
     private UsuarioDAO usuarioDAO;
 
-    public Controladora(UsuarioDAO usuarioDAO) {
-        this.usuarioDAO = usuarioDAO;
+    public Controladora(UsuarioDAO usuario) {
+        this.usuarioDAO = usuario;
     }
     
-    public boolean login(String user,String pass){
+    public boolean login(String username,String password){
         List<Usuario> usuarios = new ArrayList<>();
         boolean valida=false;
-        usuarios = usuarioDAO.obtenerUsuarios();
+        usuarios = usuarioDAO.obtenerTodos();
         
         
         for (Usuario usern:usuarios){
-            valida = user.equals(usern.getNombre_usuario()) && pass.equals(usern.getContrasenia());
+            valida = username.equals(usern.getUsername()) && password.equals(usern.getPassword());
             if(valida)
                 break;
         }

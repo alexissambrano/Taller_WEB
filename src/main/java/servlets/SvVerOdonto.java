@@ -58,12 +58,12 @@ public class SvVerOdonto extends HttpServlet {
         OdontologoDAO odontologoDAO = new OdontologoDAO(conexion); // Asegúrate de que tu DAO esté correctamente configurado
         
         // Obtiene la lista de odontólogos de la base de datos
-        List<Odontologo> listaOdontologos = odontologoDAO.obtenerOdontologos();
+        //List<Odontologo> listaOdontologos = odontologoDAO.obtenerOdontologos();
         // Establece la lista en el ámbito de la solicitud
-        request.setAttribute("listaOdontologos", listaOdontologos);
+        //request.setAttribute("listaOdontologos", listaOdontologos);
         
         // Redirigir a la página JSP que mostrará la lista
-            request.getRequestDispatcher("ver_odontologos.jsp").forward(request, response);
+          //  request.getRequestDispatcher("ver_odontologos.jsp").forward(request, response);
     }
 
     /**

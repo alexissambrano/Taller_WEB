@@ -4,7 +4,6 @@
  */
 package DAO;
 
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,97 +12,101 @@ import java.util.ArrayList;
 import java.util.List;
 import persistencia.Usuario;
 
-public class UsuarioDAO {
-
+public class UsuarioDAO implements DAO<Usuario> {
     private Connection conexion;
 
+    // Constructor que recibe la conexión a la base de datos
     public UsuarioDAO(Connection conexion) {
         this.conexion = conexion;
     }
 
-    public void insertarUsuario(Usuario usuario) {
-        try {
-            String sql = "INSERT INTO usuario (id_usuario, nombre_usuario, contrasenia, rol, id_odontologo, id_secretario) VALUES (?, ?, ?, ?, ?, ?)";
-            PreparedStatement statement = conexion.prepareStatement(sql);
-            statement.setInt(1, usuario.getId_usuario());
-            statement.setString(2, usuario.getNombre_usuario());
-            statement.setString(3, usuario.getContrasenia());
-            statement.setString(4, usuario.getRol());
-            statement.setString(5, usuario.getId_odontologo());
-            statement.setString(6, usuario.getId_secretario());
-            statement.executeUpdate();
+    @Override
+    public void agregar(Usuario usuario) {
+        String query = "INSERT INTO usuario (id_usuario, username, password, rol) VALUES (?, ?, ?, ?)";
+        try (PreparedStatement pst = conexion.prepareStatement(query)) {
+            pst.setInt(1, usuario.getId_usuario());
+            pst.setString(2, usuario.getUsername());
+            pst.setString(3, usuario.getPassword());
+            pst.setString(4, usuario.getRol());
+
+            pst.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    public List<Usuario> obtenerUsuarios() {
-        List<Usuario> usuarios = new ArrayList<>();
-        try {
-            String sql = "SELECT * FROM usuario";
-            PreparedStatement statement = conexion.prepareStatement(sql);
-            ResultSet result = statement.executeQuery();
+    @Override
+    public Usuario obtenerPorId(int id) {
+        Usuario usuario = null;
+        String query = "SELECT * FROM usuario WHERE id_usuario = ?";
 
-            while (result.next()) {
-                int idUsuario = result.getInt("id_usuario");
-                String nombreUsuario = result.getString("nombre_usuario");
-                String contrasenia = result.getString("contrasenia");
-                String rol = result.getString("rol");
-                String idOdontologo = result.getString("id_odontologo");
-                String idSecretario = result.getString("id_secretario");
-                usuarios.add(new Usuario(idUsuario, nombreUsuario, contrasenia, rol, idOdontologo, idSecretario));
+        try (PreparedStatement pst = conexion.prepareStatement(query)) {
+            pst.setInt(1, id);
+
+            ResultSet rs = pst.executeQuery();
+
+            if (rs.next()) {
+                usuario = new Usuario(
+                        rs.getInt("id_usuario"),
+                        rs.getString("username"),
+                        rs.getString("password"),
+                        rs.getString("rol")
+                );
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+        return usuario;
+    }
+
+    @Override
+    public List<Usuario> obtenerTodos() {
+        List<Usuario> usuarios = new ArrayList<>();
+        String query = "SELECT * FROM usuario";
+
+        try (PreparedStatement pst = conexion.prepareStatement(query)) {
+            ResultSet rs = pst.executeQuery();
+
+            while (rs.next()) {
+                Usuario usuario = new Usuario(
+                        rs.getInt("id_usuario"),
+                        rs.getString("username"),
+                        rs.getString("password"),
+                        rs.getString("rol")
+                );
+                usuarios.add(usuario);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         return usuarios;
     }
 
-    public void eliminarUsuario(int idUsuario) {
-        try {
-            String sql = "DELETE FROM usuario WHERE id_usuario = ?";
-            PreparedStatement statement = conexion.prepareStatement(sql);
-            statement.setInt(1, idUsuario);
-            statement.executeUpdate();
+    @Override
+    public void actualizar(Usuario usuario) {
+        String query = "UPDATE usuario SET username=?, password=?, rol=? WHERE id_usuario=?";
+        try (PreparedStatement pst = conexion.prepareStatement(query)) {
+            pst.setString(1, usuario.getUsername());
+            pst.setString(2, usuario.getPassword());
+            pst.setString(3, usuario.getRol());
+            pst.setInt(4, usuario.getId_usuario());
+
+            pst.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    public void editarUsuario(Usuario usuario) {
-        try {
-            String sql = "UPDATE usuario SET nombre_usuario = ?, contrasenia = ?, rol = ?, id_odontologo = ?, id_secretario = ? WHERE id_usuario = ?";
-            PreparedStatement statement = conexion.prepareStatement(sql);
-            statement.setString(1, usuario.getNombre_usuario());
-            statement.setString(2, usuario.getContrasenia());
-            statement.setString(3, usuario.getRol());
-            statement.setString(4, usuario.getId_odontologo());
-            statement.setString(5, usuario.getId_secretario());
-            statement.setInt(6, usuario.getId_usuario());
-            statement.executeUpdate();
+    @Override
+    public void eliminar(int id) {
+        String query = "DELETE FROM usuario WHERE id_usuario=?";
+        try (PreparedStatement pst = conexion.prepareStatement(query)) {
+            pst.setInt(1, id);
+            pst.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }
-
-    public Usuario obtenerUsuarioPorId(int idUsuario) {
-        try {
-            String sql = "SELECT * FROM usuario WHERE id_usuario = ?";
-            PreparedStatement statement = conexion.prepareStatement(sql);
-            statement.setInt(1, idUsuario);
-            ResultSet result = statement.executeQuery();
-
-            if (result.next()) {
-                String nombreUsuario = result.getString("nombre_usuario");
-                String contrasenia = result.getString("contrasenia");
-                String rol = result.getString("rol");
-                String idOdontologo = result.getString("id_odontologo");
-                String idSecretario = result.getString("id_secretario");
-                return new Usuario(idUsuario, nombreUsuario, contrasenia, rol, idOdontologo, idSecretario);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null; // Devuelve null si no se encuentra el usuario
     }
 }

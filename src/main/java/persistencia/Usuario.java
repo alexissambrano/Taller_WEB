@@ -2,25 +2,21 @@
 package persistencia;
 
 public class Usuario {
+    // Atributos
     private int id_usuario;
-    private String nombre_usuario;
-    private String contrasenia;
+    private String username;
+    private String password;
     private String rol;
-    private String id_odontologo;
-    private String id_secretario;
 
-    public Usuario(){
-    }
-
-    public Usuario(int id_usuario, String nombre_usuario, String contrasenia, String rol, String id_odontologo, String id_secretario) {
+    // Constructor
+    public Usuario(int id_usuario, String username, String password, String rol) {
         this.id_usuario = id_usuario;
-        this.nombre_usuario = nombre_usuario;
-        this.contrasenia = contrasenia;
+        this.username = username;
+        this.password = password;
         this.rol = rol;
-        this.id_odontologo = id_odontologo;
-        this.id_secretario = id_secretario;
     }
-    
+
+    // Métodos getter y setter para acceder a los atributos
     public int getId_usuario() {
         return id_usuario;
     }
@@ -29,22 +25,21 @@ public class Usuario {
         this.id_usuario = id_usuario;
     }
 
-    public String getNombre_usuario() {
-        return nombre_usuario;
+    public String getUsername() {
+        return username;
     }
 
-    public void setNombre_usuario(String nombre_usuario) {
-        this.nombre_usuario = nombre_usuario;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getContrasenia() {
-        return contrasenia;
+    public String getPassword() {
+        return password;
     }
 
-    public void setContrasenia(String contrasenia) {
-        this.contrasenia = contrasenia;
+    public void setPassword(String password) {
+        this.password = password;
     }
-    
 
     public String getRol() {
         return rol;
@@ -54,21 +49,6 @@ public class Usuario {
         this.rol = rol;
     }
 
-    public String getId_odontologo() {
-        return id_odontologo;
-    }
-
-    public void setId_odontologo(String id_odontologo) {
-        this.id_odontologo = id_odontologo;
-    }
-
-    public String getId_secretario() {
-        return id_secretario;
-    }
-
-    public void setId_secretario(String id_secretario) {
-        this.id_secretario = id_secretario;
-    }
-    
-    
+    // Otros métodos que puedas necesitar para la clase Usuario
 }
+
